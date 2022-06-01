@@ -61,6 +61,6 @@ app.use(bodyparser.json());
 app.get("/", (req, res) => {
   res.status(200).send(`Hi Welcome to the Keepify`);
 });
-
+app.listen(port,()=>{});
 const user = require("./routes/register");
 app.use("/register", user);
