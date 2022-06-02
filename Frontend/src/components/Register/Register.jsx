@@ -18,7 +18,7 @@ const Register = () => {
     })
     }
 //register function 
-   const egister = ()=>{
+   const egister = (e)=>{
      e.preventDefault();
    const {name,email,password} = user
    if (name && email && password){

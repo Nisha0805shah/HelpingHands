@@ -16,10 +16,10 @@ export default function TopBar() {
       </div>
       <div className="topCenter">
           <ul className="topList">
-              <li className="topListItems">HOME</li>
-              <li className="topListItems">ABOUT</li>
-              <li className="topListItems">CONTACT</li>
-              <li className="topListItems">FEEDBACK</li>
+              <li className="topListItems"><Link className="link" to="/">HOME</Link></li>
+              <li className="topListItems"> <Link className="link" to="/aboutus">ABOUT</Link></li>
+              <li className="topListItems"><Link className="link" to="/contactus">CONTACT</Link></li>
+              <li className="topListItems"><Link className="link" to="/feedback">FEEDBACK</Link></li>
               <li className="topListItems">LOGOUT</li>
           </ul>
       </div>
@@ -29,7 +29,7 @@ export default function TopBar() {
           alt="" 
           /> */}
           <ul className="topList">
-          <Link to="/login">Login/Register</Link>
+          <Link className="link" to="/login">Login/Register</Link>
           
           
           {/* <li className="topListItems"></li> */}
