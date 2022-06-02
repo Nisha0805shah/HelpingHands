@@ -53,12 +53,13 @@ router.post("/register", async (req, res) => {
               });
           }
         });
-      } else {
-
-        res.json({
-          staus:404,
-          message:"User already exists..."
-        });
+      } 
+      else 
+      {
+        res.send({message:"user already exist"})
+        // res.json({
+          // staus:404,
+          // message:"User already exists..."
       }
     })
     .catch(err => {
