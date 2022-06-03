@@ -1,6 +1,7 @@
 import React from 'react'
 //import Header from '../header/Header'
 import TopBar from '../topbar/Topbar'
+//import Logo from "../assets/images/HHLogo4.png";
 import "./aboutus.css"
 
 export default function Aboutus() {
@@ -10,9 +11,10 @@ export default function Aboutus() {
       
       <br></br>
       <br></br>
+      <div className="aboutusmain">
       <div className='page'>
         <div className='aboutus'>
-            <h1>ABOUT US</h1>
+            <h1>About Us</h1>
             <hr></hr>
             <br></br>
             <p>Like all good things, the idea of HELPING HANDS was born out of necessity. When you need help with small but important household chores, 
@@ -25,6 +27,12 @@ export default function Aboutus() {
                 We are here to build the best on-demand services company in the world.</h3> 
                 <br></br><h2>And now, we simply can't wait to be of help to you.</h2>
         </div>
+        <div className="aboutusImg">
+        <img className="LogoImg" src="https://media.istockphoto.com/photos/woman-makes-cleaning-picture-id600396542?k=20&m=600396542&s=612x612&w=0&h=N0rqrxXwH7WJFVODmGupb-tNayzCFyN9IXrGCV8kBSU=" 
+        alt=''
+        />
+        </div>
+      </div>
       </div>
     </>
   )

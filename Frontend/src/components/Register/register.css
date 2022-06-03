@@ -1,5 +1,6 @@
-.login{
-    height:calc(100vh - 50px);
+.registermain{
+    /* height:calc(100vh - 50px); */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,23 +12,57 @@
     url("https://www.youthhelpingtrust.org/wp-content/uploads/2019/08/oldage-670x480.jpg");
     background-size:cover;
 }
-.loginTitle{
-    font-size: 50px;
+.register{
+    padding-top: 90px;
+    /* margin-top: 100px; */
+    background-color: #aac5db;
+    width: 500px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 530px;
+    border-radius: 10px;
+
 }
-.loginForm{
+.registerTitle{
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.RegisterImgLogin{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -50px;   
+}
+.registerForm{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    /* margin: auto; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* text-align: center; */
 }
-.loginForm > label{
+.registerForm > label{
     margin: 10px 0;
 }
-.loginInput{
-    padding: 10px;
-    background-color: white;
+.registerInput{
+    padding: 15px;
+    background-color: #aac5db;
+    /* background-color: white; */
     border: none;
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    color: black;
+    font-weight: 300;
 }
-.loginButton{
+.registerButton{
     margin-top: 20px;
     cursor: pointer;
     background-color:lightcoral;
@@ -35,8 +70,9 @@
     color: white;
     border-radius: 10px;
     padding: 10px;
+    width: 100%;
 }
-/* .LoginRegisterButton{
+/* .registerRegisterButton{
     position: absolute;
     top: 130px;
     right: 20px;
