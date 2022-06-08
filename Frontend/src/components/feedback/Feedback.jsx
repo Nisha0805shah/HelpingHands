@@ -4,8 +4,10 @@ import TopBar from '../topbar/Topbar'
 import { FaStar } from "react-icons/fa";
 
 const colors = {
-    orange: "#FFBA5A",
-    grey: "#A9A9A9"    
+  orange: "#FFBA5A",
+  grey: "#A9A9A9",
+  lightcorol: "#f08080",
+  white:"#FFFFFF"
 };
 
 export default function Feedback() {
@@ -27,33 +29,35 @@ export default function Feedback() {
 
 
   return (
-      <>
-            <TopBar />
-    <div className="container">
-      <h2> Service Ratings </h2>
-      <div className="stars">
-        {stars.map((_, index) => {
-          return (
-            <FaStar
-              key={index}
-              size={30}
-              onClick={() => handleClick(index + 1)}
-              onMouseOver={() => handleMouseOver(index + 1)}
-              onMouseLeave={handleMouseLeave}
-              color={(hoverValue || currentValue) > index ? colors.orange : colors.grey}
-              className="star-size"
-            />
-          )
-        })}
+    <>
+      <TopBar />
+      <div className="feedbackmain">
+        <div className="feedback">
+        <h2> Service Ratings </h2>
+        <div className="stars">
+          {stars.map((_, index) => {
+            return (
+              <FaStar
+                key={index}
+                size={30}
+                onClick={() => handleClick(index + 1)}
+                onMouseOver={() => handleMouseOver(index + 1)}
+                onMouseLeave={handleMouseLeave}
+                color={(hoverValue || currentValue) > index ? colors.lightcorol : colors.white}
+                className="star-size"
+              />
+            )
+          })}
+        </div>
+        <textarea
+          placeholder="What's your experience?"
+          className="textareafeedback"
+        />
+        <br></br>
+        <button className="feedbackbutton">Submit</button>
+
       </div>
-      <textarea
-        placeholder="What's your experience?"
-        className="textarea"
-      />
-    <br></br>
-      <button className="button">Submit</button>
-      
-    </div>
+      </div>
     </>
   );
 };

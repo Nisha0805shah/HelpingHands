@@ -1,5 +1,6 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Login from "./components/login/Login";
+// import {useState} from 'react';
 //import TopBar from "./components/topbar/Topbar";
 import Home from "./components/Home/Home";
 import Register from "./components/Register/Register";
@@ -15,7 +16,7 @@ function App() {
      <BrowserRouter>
         <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/login" element={<Login />}/>
+        <Route path="/Login" element={<Login/>}></Route>
         <Route path="/register" element={<Register />}/>
         <Route path="/aboutus" element={<Aboutus />}/>
         <Route path="/contactus" element={<Contactus />}/>

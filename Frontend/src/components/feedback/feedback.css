@@ -1,25 +1,64 @@
-.container {
-    display: "flex";
+.feedback {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+    line-height: 2;
+    /* border: 1px solid black; */
+    width: 500px;
+    height: 300px;
+    /* padding-top: 10px; */
+    /* margin-top: 100px; */
+    background-color: #aac5db;
+    border-radius: 10px;
+  }
+  .feedback > h2{
+    font-family: 'Lora', serif;
+  }
+  .feedbackmain{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    /* justify-content: center; */
+    align-items: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255,255,255,0.5)
+    ),
+    url("https://www.youthhelpingtrust.org/wp-content/uploads/2019/08/oldage-670x480.jpg");
+    background-size:cover;
   }
   .stars {
-    display: "flex";
+    display: flex;
     flex-direction: row;
+    
   }
-  .textarea {
-    border: "1px solid #a9a9a9";
+ 
+  .textareafeedback {
+    margin-top: 20px;
+    border: 1px solid white;
     border-radius: 5px;
     padding: 10;
     margin: "20px 0";
     min-height: 100px;
     width: 300px;
+    background-color: #aac5db;
   }
 
-  .button {
-    border: "1px solid #a9a9a9";
-    width: 300;
+  .feedbackbutton {
     padding: 10;
+    cursor: pointer;
+    background-color:lightcoral;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    width: 60%;
+    /* border: "1px solid #a9a9a9";
+    width: 300;
+    padding: 10; */
   }
 
   .star-size

@@ -64,3 +64,5 @@ app.get("/", (req, res) => {
 app.listen(port,()=>{});
 const user = require("./routes/register");
 app.use("/register", user);
+
+app.use("/Login",user);

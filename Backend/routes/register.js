@@ -23,7 +23,7 @@ const jsonwt = require("jsonwebtoken");
 var router = express.Router();
 
 var User = require("../models/register");
-// var key = require("../mysetup/myurl");
+var key = require("../mysetup/myurl");
 const saltRounds = 10;
 
 router.post("/register", async (req, res) => {
@@ -68,55 +68,55 @@ router.post("/register", async (req, res) => {
     });
 });
 
-// router.post("/login", async (req, res) => {
-//   var newUser = {};
-//   newUser.email = req.body.email;
-//   newUser.password = req.body.password;
+router.post("/Login", async (req, res) => {
+  var newUser = {};
+  newUser.email = req.body.email;
+  newUser.password = req.body.password;
 
-//   await User.findOne({ email: newUser.email })
-//     .then(profile => {
-//       if (!profile) {
-//         res.send("User not exist");
-//       } else {
-//         bcrypt.compare(
-//           newUser.password,
-//           profile.password,
-//           async (err, result) => {
-//             if (err) {
-//               console.log("Error is", err.message);
-//             } else if (result == true) {
-//               //   res.send("User authenticated");
-//               const payload = {
-//                 id: profile.id,
-//                 email: profile.email
-//               };
-//               jsonwt.sign(
-//                 payload,
-//                 key.secret,
-//                 { expiresIn: 3600 },
-//                 (err, token) => {
-//                   if (err) {
-//                     console.log("Error is ", err.message);
-//                   }
-//                   res.json({
-//                     status: 200,
-//                     message: "Bearer " + token
-//                   });
-//                 }
-//               );
-//             } else {
-//               res.json({
-//                 status: false
-//               });
-//             }
-//           }
-//         );
-//       }
-//     })
-//     .catch(err => {
-//       console.log("Error is ", err.message);
-//     });
-// });
+  await User.findOne({ email: newUser.email })
+    .then(profile => {
+      if (!profile) {
+        res.send("User not exist");
+      } else {
+        bcrypt.compare(
+          newUser.password,
+          profile.password,
+          async (err, result) => {
+            if (err) {
+              console.log("Error is", err.message);
+            } else if (result == true) {
+              //   res.send("User authenticated");
+              const payload = {
+                id: profile.id,
+                email: profile.email
+              };
+              jsonwt.sign(
+                payload,
+                key.secret,
+                { expiresIn: 3600 },
+                (err, token) => {
+                  if (err) {
+                    console.log("Error is ", err.message);
+                  }
+                  res.json({
+                    status: 200,
+                    message: "Bearer " + token
+                  });
+                }
+              );
+            } else {
+              res.json({
+                status: false
+              });
+            }
+          }
+        );
+      }
+    })
+    .catch(err => {
+      console.log("Error is ", err.message);
+    });
+});
 
 // router.get(
 //   "/profile",
