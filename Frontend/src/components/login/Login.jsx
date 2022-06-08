@@ -1,6 +1,5 @@
 import "./login.css";
 import Logo from "../assets/images/HHLogo4.png";
-<<<<<<< HEAD
 import { Link,useNavigate } from "react-router-dom";
 import React, { useState } from 'react'
 import axios from 'axios';
@@ -63,33 +62,6 @@ const Login = ({ setLoginUser }) => {
         </div>
 
       </div>
-=======
-import {Link} from "react-router-dom";
-export default function Login() {
-  return (
-    <div className="loginmain">
-    <div className="login">
-    <img className="LogoImgLogin" src={Logo} alt="Logo" />
-        <div className="loginTitle">Login</div>
-       
-       <form action="" className="loginForm">
-      
-         
-            {/* <label>Email</label> */}
-            <input className="loginInput" type="email" placeholder="Enter your Email"/>
-            <br />
-            {/* <label >Password</label> */}
-            <input className="loginInput" type="password" placeholder="Enter your Password"/>
-            <button className="loginButton">Login</button>
-      </form>
-      <div className="registerLogin">
-      <label>New User? &nbsp; 
-     <Link to="/register">
-        Register Now</Link></label>
-      </div>
-   
-    </div>
->>>>>>> 5da16437d978f86b90e36e2f8da39f3d19bdb8c9
     </div>
   )
 }
